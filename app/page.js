@@ -1,54 +1,6 @@
 "use client";
 import { useState, useMemo } from "react";
-
-const tools = [
-  // Writing
-  { name: "ChatGPT", category: "Writing", description: "AI assistant for writing, research and productivity.", url: "https://chat.openai.com", slug: "chatgpt" },
-  { name: "Claude", category: "Writing", description: "AI assistant with long context and thoughtful answers.", url: "https://claude.ai", slug: "claude" },
-  { name: "Notion AI", category: "Writing", description: "AI writing assistant built into Notion.", url: "https://notion.so", slug: "notion-ai" },
-  { name: "Jasper", category: "Writing", description: "AI copywriting tool for marketing teams.", url: "https://jasper.ai", slug: "jasper" },
-  { name: "Grammarly", category: "Writing", description: "AI grammar and style checker.", url: "https://grammarly.com", slug: "grammarly" },
-  // Coding
-  { name: "Cursor", category: "Coding", description: "AI code editor for developers.", url: "https://cursor.sh", slug: "cursor" },
-  { name: "GitHub Copilot", category: "Coding", description: "AI pair programmer integrated into your editor.", url: "https://github.com/features/copilot", slug: "github-copilot" },
-  { name: "Replit", category: "Coding", description: "AI-powered coding environment in the browser.", url: "https://replit.com", slug: "replit" },
-  { name: "Tabnine", category: "Coding", description: "AI code completion for all major IDEs.", url: "https://tabnine.com", slug: "tabnine" },
-  // Image
-  { name: "Midjourney", category: "Image", description: "AI image generation platform.", url: "https://midjourney.com", slug: "midjourney" },
-  { name: "DALL·E 3", category: "Image", description: "OpenAI's image generation model.", url: "https://openai.com/dall-e-3", slug: "dalle-3" },
-  { name: "Stable Diffusion", category: "Image", description: "Open-source AI image generation.", url: "https://stability.ai", slug: "stable-diffusion" },
-  { name: "Adobe Firefly", category: "Image", description: "Adobe's generative AI for creatives.", url: "https://firefly.adobe.com", slug: "adobe-firefly" },
-  // Video
-  { name: "Runway", category: "Video", description: "AI video generation and editing platform.", url: "https://runwayml.com", slug: "runway" },
-  { name: "Sora", category: "Video", description: "OpenAI's text-to-video model.", url: "https://openai.com/sora", slug: "sora" },
-  { name: "Pika", category: "Video", description: "AI video creation from text and images.", url: "https://pika.art", slug: "pika" },
-  // Research
-  { name: "Perplexity", category: "Research", description: "AI-powered search engine and answer assistant.", url: "https://perplexity.ai", slug: "perplexity" },
-  { name: "Consensus", category: "Research", description: "AI search engine for scientific papers.", url: "https://consensus.app", slug: "consensus" },
-  // Productivity
-  { name: "Otter.ai", category: "Productivity", description: "AI meeting transcription and notes.", url: "https://otter.ai", slug: "otter-ai" },
-  { name: "Make", category: "Productivity", description: "AI-powered automation platform.", url: "https://make.com", slug: "make" },
-];
-
-const CATEGORIES = ["All", ...Array.from(new Set(tools.map((t) => t.category)))];
-
-const CATEGORY_COLORS = {
-  Writing: { bg: "bg-violet-500/10", text: "text-violet-400", border: "border-violet-500/20" },
-  Coding: { bg: "bg-cyan-500/10", text: "text-cyan-400", border: "border-cyan-500/20" },
-  Image: { bg: "bg-pink-500/10", text: "text-pink-400", border: "border-pink-500/20" },
-  Video: { bg: "bg-orange-500/10", text: "text-orange-400", border: "border-orange-500/20" },
-  Research: { bg: "bg-emerald-500/10", text: "text-emerald-400", border: "border-emerald-500/20" },
-  Productivity: { bg: "bg-yellow-500/10", text: "text-yellow-400", border: "border-yellow-500/20" },
-};
-
-const CATEGORY_ICONS = {
-  Writing: "✍️",
-  Coding: "💻",
-  Image: "🎨",
-  Video: "🎬",
-  Research: "🔬",
-  Productivity: "⚡",
-};
+import { tools, CATEGORIES, CATEGORY_COLORS, CATEGORY_ICONS } from "@/lib/tools";
 
 export default function Home() {
   const [search, setSearch] = useState("");
@@ -156,7 +108,6 @@ export default function Home() {
                   key={tool.slug}
                   className="group bg-slate-900/60 border border-slate-800 rounded-2xl p-6 flex flex-col hover:border-slate-600 transition-all duration-200 hover:bg-slate-900"
                 >
-                  {/* Category badge */}
                   <span
                     className={`inline-flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1 rounded-full border w-fit mb-4 ${color.bg} ${color.text} ${color.border}`}
                   >
