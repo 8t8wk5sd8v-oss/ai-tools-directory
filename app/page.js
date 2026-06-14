@@ -1,4 +1,31 @@
 const tools = [
+  {
+    name: "ChatGPT",
+    category: "Writing",
+    description: "AI assistant for writing, research and productivity."
+  },
+  {
+    name: "Claude",
+    category: "Writing",
+    description: "AI assistant with long context and thoughtful answers."
+  },
+  {
+    name: "Cursor",
+    category: "Coding",
+    description: "AI code editor for developers."
+  },
+  {
+    name: "Midjourney",
+    category: "Image",
+    description: "AI image generation platform."
+  },
+  {
+    name: "Runway",
+    category: "Video",
+    description: "AI video generation and editing."
+  }
+];
+const tools = [
   { name: "ChatGPT", category: "Writing", description: "AI assistant for writing, research, coding and productivity." },
   { name: "Claude", category: "Writing", description: "AI assistant focused on long documents and thoughtful answers." },
   { name: "Cursor", category: "Coding", description: "AI code editor for developers." },
