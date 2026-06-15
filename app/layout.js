@@ -1,5 +1,5 @@
 import "./globals.css";
-import CookieBanner from "@/components/CookieBanner";
+import CookieBanner from "../components/CookieBanner";
 
 const GA_ID = "G-WZ4J40CPRQ";
 
