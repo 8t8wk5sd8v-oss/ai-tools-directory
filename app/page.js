@@ -1,6 +1,6 @@
 "use client";
 import { useState, useMemo } from "react";
-import { tools, CATEGORIES, CATEGORY_COLORS, CATEGORY_ICONS } from "@/lib/tools";
+import { tools, CATEGORIES, CATEGORY_COLORS, CATEGORY_ICONS } from "../lib/tools";
 
 export default function Home() {
   const [search, setSearch] = useState("");
