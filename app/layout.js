@@ -11,7 +11,7 @@ export const metadata = {
   },
   description:
     "A curated directory of the best AI tools for writing, coding, image generation, video, research and productivity.",
-  metadataBase: new URL("https://ai-tools-directory-ten-sand.vercel.app"),
+  metadataBase: new URL("https://aitoolsdirectory.tech"),
   openGraph: {
     type: "website",
     siteName: "AI Tools Directory",
