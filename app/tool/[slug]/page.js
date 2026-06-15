@@ -5,7 +5,7 @@ export function generateStaticParams() {
   return tools.map((t) => ({ slug: t.slug }));
 }
 
-export function generateMetadata({ params }) {
+export async function generateMetadata({ params }) {
   const { slug } = await params;
 const tool = tools.find((t) => t.slug === slug);
   if (!tool) return { title: "Tool not found" };
@@ -19,7 +19,7 @@ const tool = tools.find((t) => t.slug === slug);
   };
 }
 
-export default function ToolPage({ params }) {
+export default async function ToolPage({ params }) {
   const { slug } = await params;
 const tool = tools.find((t) => t.slug === slug);
   if (!tool) {
