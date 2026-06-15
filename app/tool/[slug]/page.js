@@ -6,7 +6,8 @@ export function generateStaticParams() {
 }
 
 export function generateMetadata({ params }) {
-  const tool = tools.find((t) => t.slug === params.slug);
+  const { slug } = await params;
+const tool = tools.find((t) => t.slug === slug);
   if (!tool) return { title: "Tool not found" };
   return {
     title: `${tool.name} Review & Pricing (2025) — AI Tools Directory`,
@@ -19,8 +20,8 @@ export function generateMetadata({ params }) {
 }
 
 export default function ToolPage({ params }) {
-  const tool = tools.find((t) => t.slug === params.slug);
-
+  const { slug } = await params;
+const tool = tools.find((t) => t.slug === slug);
   if (!tool) {
     return (
       <main className="min-h-screen bg-[#080c14] text-white flex items-center justify-center">
