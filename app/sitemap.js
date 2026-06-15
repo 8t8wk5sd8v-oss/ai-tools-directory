@@ -5,8 +5,7 @@
 import { tools } from "../lib/tools";
 
 export default function sitemap() {
-  const base = "https://ai-tools-directory-ten-sand.vercel.app"; // ← замени на свой домен
-
+  const base = "https://aitoolsdirectory.tech";
   const toolPages = tools.map((tool) => ({
     url: `${base}/tool/${tool.slug}`,
     lastModified: new Date(),
