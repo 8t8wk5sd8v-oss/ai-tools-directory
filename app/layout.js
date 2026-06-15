@@ -1,4 +1,5 @@
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
 import CookieBanner from "../components/CookieBanner";
 
 const GA_ID = "G-WZ4J40CPRQ";
@@ -48,6 +49,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         {children}
+        <Analytics />
         <CookieBanner />
       </body>
     </html>
