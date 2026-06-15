@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { tools, CATEGORY_COLORS, CATEGORY_ICONS } from "../../lib/tools";
+import { tools, CATEGORY_COLORS, CATEGORY_ICONS } from "../../../lib/tools";
 
 export function generateStaticParams() {
   return tools.map((t) => ({ slug: t.slug }));
