@@ -15,7 +15,7 @@ You MUST respond with ONLY valid JSON, no text before or after, no markdown, no 
 {"recommendations":[{"name":"Tool Name","reason":"Why it fits this task","freeSufficient":true,"planAdvice":"Free plan is enough OR You need Pro ($X/month) because..."}],"summary":"One sentence summary"}`;
 
   const response = await fetch(
-    `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-8b:generateContent?key=${process.env.GEMINI_API_KEY}`,
+    `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-lite:generateContent?key=${process.env.GEMINI_API_KEY}`,
     {
       method: "POST",
       headers: { "Content-Type": "application/json" },
